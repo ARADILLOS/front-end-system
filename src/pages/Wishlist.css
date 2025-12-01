@@ -1,0 +1,123 @@
+.wishlist-page {
+  max-width: 1600px;
+  margin: 36px auto;
+  padding: 0 10px;
+  margin-right: 190x;
+}
+
+.wishlist-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.wishlist-sub {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0 0 8px 0;
+}
+.wishlist-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f1724;
+  margin: 0;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.wish-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 20px 22px 20px;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(15,23,36,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid rgba(15,23,36,0.03);
+}
+
+.quote-mark {
+  font-size: 36px;
+  color: #cbd5e1;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.wish-message {
+  color: #0f1724;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 18px 12px 0 12px;
+}
+
+.wish-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wish-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: none;
+  background: #eef2ff;
+  color: #0f1724;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(2,6,23,0.04);
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.action-btn.share { background: #ffffff; border: 1px solid #eef2ff; }
+.action-btn.view { background: #eef2ff; }
+.action-btn.save.saved { background: #0f1724; color: #fff; }
+.action-btn:active { transform: translateY(1px); }
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(2,6,23,0.06);
+}
+.author-info {
+  text-align: left;
+}
+.author-name { font-weight: 600; color: #0f1724; }
+.author-handle { font-size: 0.88rem; color: #6b7280; }
+
+/* sparkline removed - styles cleaned */
+/* spark-tooltip removed per design */
+
+@media (max-width: 1000px) {
+  .wishlist-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .wishlist-grid { grid-template-columns: 1fr; }
+  .wish-card { padding: 22px; min-height: 180px; }
+}
